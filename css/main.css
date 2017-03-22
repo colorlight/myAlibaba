@@ -1,0 +1,134 @@
+* {
+	box-sizing: border-box;
+	
+}
+
+body{
+	font-size: 14px;
+	color: #444;
+}
+
+a {
+	text-decoration: none;
+}
+.container{
+	display: block;
+	max-width: 1080px; 
+	margin: 0 auto;	
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+.clear-float::after,
+.clear-float::before{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*所有分栏共享的属性*/
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9{
+	display: block;
+	position: relative;
+	min-height: 1px;
+	float: left;
+}
+
+/*独有的属性*/
+.col-1{
+	width: 10%;
+}
+
+.col-2{
+	width: 20%;
+}
+.col-3{
+	width: 30%;
+}
+.col-4{
+	width: 40%;
+}
+.col-5{
+	width: 50%;
+}
+.col-6{
+	width: 60%;
+}
+.col-7{
+	width: 70%;
+}
+.col-8{
+	width: 80%;
+}
+.col-9{
+	width: 90%;
+}
+
+
+.top-nav{
+	background: #eee;
+}
+
+.top-nav a{
+	display: inline-block;
+	padding: 6px 10px;
+	/*如果不设置inline-block会导致padding无用*/
+}
+
+.top-nav a:hover{
+	color: #333;
+}
+
+.header{
+	padding: 20px 0;
+}
+
+.header .logo {
+	font-size: 30px;
+}
+
+.header .search-bar{
+	border: 2px solid #dd182b;
+	width:540px;
+}
+
+.header .search-bar input,
+.header .search-bar button{
+	border: 0;
+	padding: 10px;
+
+}
+
+/*虽然父级div漂浮了，但是input和button没有漂浮
+ *在父级的元素内部还是按照正常的flow排序的
+ *所以，为了让在父级框内横向排序，还是要让这
+ 两个元素分别浮动，并且按照一定比例的宽度*/
+/*.header .search-bar input{
+	width: 80%;
+}
+
+.header .search-bar button{
+	width: 20%;
+}
+不采用这种方法，应为可以利用之前的比例选择器*/
+
+.header .search-bar button{
+	background: #dd182b;
+	color: #fff;
+
+	/*line-height: 10px;*/
+}
