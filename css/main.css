@@ -6,10 +6,12 @@
 body{
 	font-size: 14px;
 	color: #444;
+	line-height: 1.7;
 }
 
 a {
 	text-decoration: none;
+	/*display: inline-block;*/
 }
 .container{
 	display: block;
@@ -94,7 +96,9 @@ a {
 }
 
 .header{
+	height: 70px;
 	padding: 20px 0;
+	background: #f6f6f6;
 }
 
 .header .logo {
@@ -102,15 +106,31 @@ a {
 }
 
 .header .search-bar{
-	border: 2px solid #dd182b;
+	/*border: 2px solid #dd182b;*/
 	width:540px;
+
 }
 
+/*这个outline是清除输入框的边框外面的线的*/
 .header .search-bar input,
 .header .search-bar button{
 	border: 0;
 	padding: 10px;
+	outline: 0;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	transition:  200ms cubic-bezier(0.4, 0, 0.2, 1)
+	/*transition属性挺好玩的，视觉效果可以*/
+}
 
+
+.header .search-bar input:focus,
+.header .search-bar button:focus{
+
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.header .search-bar button:focus{
+	background: rgba(221, 24, 43, 0.73)
 }
 
 /*虽然父级div漂浮了，但是input和button没有漂浮
@@ -131,4 +151,58 @@ a {
 	color: #fff;
 
 	/*line-height: 10px;*/
+}
+
+
+.header .cart{
+	text-align: center;
+	height: 35px;
+	width: 190px;
+	border: 1px solid #E3E4E7;
+	background: #fff;
+	margin-left: 40px;
+}
+
+/*行内元素，float之后，height和width都获得了*/
+.header .cart a{
+	display: block;
+	/*padding: 10px;*/
+	margin: 0 auto;
+	line-height: 35px;
+	width: 50%;
+}
+
+
+
+/*********main-promote-part**********/
+.main-promote .cat{
+    background: #6e6568;
+    color: #fff;
+}
+
+.main-promote .cat div{
+    padding: 12px 20px;
+
+}
+
+.main-promote .cat div:hover{
+	background: #484143;
+}
+
+.pic0{
+	width: 648px;
+}
+
+/*图片和图片的容器div底部有间隙*/
+.pic0 img{
+	width: 100%;
+	display: block;
+}
+
+.pic1{
+	width: 50%;
+}
+
+.pic1 img{
+	width: 100%;
 }
