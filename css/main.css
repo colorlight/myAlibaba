@@ -7,6 +7,7 @@ body{
 	font-size: 14px;
 	color: #444;
 	line-height: 1.7;
+	background: #f5f5f5;
 }
 
 a {
@@ -194,15 +195,87 @@ a {
 }
 
 /*图片和图片的容器div底部有间隙*/
-.pic0 img{
+img {
+	vertical-align: bottom;
 	width: 100%;
-	display: block;
 }
 
-.pic1{
-	width: 50%;
+div.sub-promote{
+	background: #fff;
+	padding: 10px;
+	box-shadow:0 1px 2px rgba(0, 0, 0, .1);
 }
 
-.pic1 img{
-	width: 100%;
+div.sub-promote > *{
+	padding-bottom: 10px;
+}
+
+div.avatar{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #000;
+	float: left;
+	margin-right: 10px;
+}
+
+
+/*因为想起到一种文字围绕图片的效果，文字就
+不要float了*/
+/*
+div.welcome{
+	float: left;
+}
+*/
+
+div.auth{
+	margin-top: 10px;
+}
+
+div.auth button{
+	border: 2px solid #dd182b;
+	background: transparent;
+	outline:none;
+	width: 40%;
+}
+
+div.auth button:hover{
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	transition:  200ms cubic-bezier(0.4, 0, 0.2, 1);
+	border:2px solid rgba(218, 25, 44, 0.64);
+}
+
+.promote-title::before{
+	content:"";
+	display: inline-block;
+	width: 10px;
+	height: 20px;
+	margin-right: 10px;
+	vertical-align: middle;
+	background: #dd182b;
+}
+
+.promote-title{
+	font-size: 22px;
+}
+
+.card{
+	height: 300px;
+	margin:5px;
+	border-radius: 5px;
+	background-color: #dd182b;
+}
+
+
+.footer{
+	text-align: center;
+	background: #eee;
+	color: #999;
+	margin-top: 30px;
+	padding: 50px;
+}
+
+.footer a{
+	margin-left: 10px;
+	
 }
